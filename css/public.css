@@ -113,6 +113,21 @@ h3.menu-item-title {
 }
 /* END SINGLE CATEGORY PAGE */
 
+/* SIGN FORM*/
+
+input {
+    color : black;
+    font-weight: bold;
+}
+.ng-touched.ng-valid {
+  border: 1px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 1px red solid;
+}
+
+/* END SIGN FORM*/
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {

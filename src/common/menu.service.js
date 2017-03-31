@@ -28,7 +28,7 @@
         };
 
         service.getCategory = function (shortName) {
-            var url = ApiPath + '/categories/' + shortName.toUpperCase() + '.json';
+            var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
             console.log('getCategory:url=' + url);
             return $http.get(url)
                 .success(function (response) {

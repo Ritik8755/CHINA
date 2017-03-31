@@ -1,8 +1,56 @@
 <div class="container">
 
-    <input type="text" placeholder="first name" />
-    <input type="text" placeholder="last name" />
-    <input type="text" placeholder="email" />
-    <input type="text" placeholder="phone" />
+    <fieldset>
+        <!--<h3 >Registration form</h3>-->
+        <form name='signup' novalidate>
+            <span></span>
+            <input type="text" name="firsname" placeholder="first name"
+                   ng-model="info.firsname"
+                   required>
+            <span ng-if="signup.firstname.$error.required && signup.username.$touched">
+                first name is mandatory
+            </span>
+            <br>            
+            <input type="text" name="lastname" placeholder="last name"
+                   ng-model="info.lastname"
+                   required>
+            <span ng-if="signup.lastname.$invalid.required && signup.username.$touched">
+                last name is mandatory
+            </span>
+            <br>
 
+            <input type="email" name="email" placeholder="Email"
+                   ng-model="info.email"
+                   required>
+            <span ng-if="signup.email.$invalid && signup.email.$touched">
+                Must be a valid email address: handle@domain format
+            </span>
+            <br>
+
+            <input type="text" name="phone" placeholder="Phone ###-###-####"
+                   ng-model="info.phone"
+                   required
+                   pattern="(\d{3})-(\d{3})-(\d{4})">
+            <span ng-if="signup.phone.$invalid && signup.phone.$touched">
+                Phone must be in the format ###-###-####.
+            </span>
+            <br>
+
+            <input type="text" name="menuitem" placeholder="Preferred menu item"
+                   ng-model="info.menuitem"
+                   pattern="(\d{3})-(\d{3})-(\d{4})">
+            <span ng-if="signup.menuitem.$invalid && signup.phone.$touched">
+            </span>
+            <br>
+
+            <button ng-disabled="signup.$invalid"
+                    ng-click="reg.submit()">
+                Submit
+            </button>
+
+            <!--<div style="margin-top: 10px;" ng-if="{{ regForm.$valid }}">
+                Please fill in all required fields
+            </div>-->
+        </form>
+    </fieldset>
 </div>

@@ -16,7 +16,7 @@ describe('menucategory', function () {
 
     it('should return an error', function () {
         var shortName = 'ss';
-        var url = ApiPath + '/categories/' + shortName.toUpperCase() + '.json';
+        var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
 
         $httpBackend.whenGET(url).respond({ status: '500', error: 'Internal Server Error' });
         service.getCategory(shortName).then(function (response) {
@@ -27,10 +27,22 @@ describe('menucategory', function () {
         $httpBackend.flush();
     });
     it('should return a category', function () {
-        var shortName = 'l';
-        var url = ApiPath + '/categories/' + shortName.toUpperCase() + '.json';
+        var shortName = 'l1';
+        var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
 
-        $httpBackend.whenGET(url).respond({ id: '1', short_name: 'L', name: 'Lunch', special_instructions: '', created_at: '2017-03-29T14:21:56.701Z', updated_at: '2017-03-29T14:21:56.701Z' });
+        $httpBackend.whenGET(url).respond(
+            {id:193,
+            short_name:'L1',
+            name:'Orange Chicken',
+            description:'chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request: for pint $1 extra, for large $2 extra',
+            price_small:null,
+            price_large:9.75,
+            small_portion_name:null,
+            large_portion_name:null,
+            created_at:'2017-03-29T14:22:03.595Z',
+            updated_at:'2017-03-29T14:22:03.595Z',
+            category_short_name:'L',
+            image_present:true});
         service.getCategory(shortName).then(function (response) {
             console.log('getCategory');
             console.log(response);
