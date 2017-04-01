@@ -118,6 +118,7 @@ h3.menu-item-title {
 input {
     color : black;
     font-weight: bold;
+    margin:5px;
 }
 .ng-touched.ng-valid {
   border: 1px green solid;
@@ -126,7 +127,16 @@ input {
 .ng-touched.ng-invalid {
   border: 1px red solid;
 }
-
+button{
+    background : #222;
+    margin:5px;
+}
+button[disabled]{
+    background:lightgray;
+}
+.my-info-detail{
+    margin:5px;
+}
 /* END SIGN FORM*/
 
 /********** Large devices only **********/

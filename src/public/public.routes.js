@@ -60,11 +60,11 @@
             templateUrl: 'src/public/sign/myInfo.html',
             controller: 'SignController',
             controllerAs: 'signCtrl',
-            resolve: {
-                infoData: ['DataService', function (DataService) {
-                    return DataService.getInformation();
-                }]
-            }
+            //resolve: {
+            //    infoData: ['DataService', function (DataService) {
+            //        return DataService.getInformation();
+            //    }]
+            //}
         })
 
     }

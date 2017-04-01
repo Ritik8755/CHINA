@@ -4,23 +4,23 @@
         <!--<h3 >Registration form</h3>-->
         <form name='signup' novalidate>
             <span></span>
-            <input type="text" name="firsname" placeholder="first name"
-                   ng-model="info.firsname"
+            <input type="text" name="firtsname" placeholder="first name"
+                   ng-model="$ctrl.firstName"
                    required>
-            <span ng-if="signup.firstname.$error.required && signup.username.$touched">
+            <span ng-if="signup.firtsname.$invalid && signup.firtsname.$touched">
                 first name is mandatory
             </span>
             <br>            
             <input type="text" name="lastname" placeholder="last name"
-                   ng-model="info.lastname"
+                   ng-model="$ctrl.lastName"
                    required>
-            <span ng-if="signup.lastname.$invalid.required && signup.username.$touched">
+            <span ng-if="signup.lastname.$invalid && signup.lastname.$touched">
                 last name is mandatory
             </span>
             <br>
 
             <input type="email" name="email" placeholder="Email"
-                   ng-model="info.email"
+                   ng-model="$ctrl.email"
                    required>
             <span ng-if="signup.email.$invalid && signup.email.$touched">
                 Must be a valid email address: handle@domain format
@@ -28,7 +28,7 @@
             <br>
 
             <input type="text" name="phone" placeholder="Phone ###-###-####"
-                   ng-model="info.phone"
+                   ng-model="$ctrl.phone"
                    required
                    pattern="(\d{3})-(\d{3})-(\d{4})">
             <span ng-if="signup.phone.$invalid && signup.phone.$touched">
@@ -37,20 +37,20 @@
             <br>
 
             <input type="text" name="menuitem" placeholder="Preferred menu item"
-                   ng-model="info.menuitem"
-                   pattern="(\d{3})-(\d{3})-(\d{4})">
-            <span ng-if="signup.menuitem.$invalid && signup.phone.$touched">
+                   ng-model="$ctrl.menuItem">
+            <span ng-if="$ctrl.infoHasBeenSaved() && $ctrl.menuItemLoaded == undefined && ($ctrl.menuItem != '' || $ctrl.menuItem == undefined)">
+                No such menu number exists
             </span>
-            <br>
+                      <br>
 
             <button ng-disabled="signup.$invalid"
-                    ng-click="reg.submit()">
+                    ng-click="$ctrl.submit()">
                 Submit
             </button>
 
-            <!--<div style="margin-top: 10px;" ng-if="{{ regForm.$valid }}">
-                Please fill in all required fields
-            </div>-->
+            <div style="margin-top: 10px;" ng-if="$ctrl.infoHasBeenSaved()">
+                Your information has been saved
+            </div>
         </form>
     </fieldset>
 </div>

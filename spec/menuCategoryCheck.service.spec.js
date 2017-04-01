@@ -1,4 +1,4 @@
-describe('menucategory', function () {
+describe('menuitem', function () {
 
     var service;
     var $httpBackend;
@@ -19,14 +19,14 @@ describe('menucategory', function () {
         var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
 
         $httpBackend.whenGET(url).respond({ status: '500', error: 'Internal Server Error' });
-        service.getCategory(shortName).then(function (response) {
-            console.log('getCategory');
+        service.getMenuItem(shortName).then(function (response) {
+            console.log('getMenuItem');
             console.log(response);
             expect(response.data.status).toBe('500');
         });
         $httpBackend.flush();
     });
-    it('should return a category', function () {
+    it('should return a menu item', function () {
         var shortName = 'l1';
         var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
 
@@ -43,8 +43,8 @@ describe('menucategory', function () {
             updated_at:'2017-03-29T14:22:03.595Z',
             category_short_name:'L',
             image_present:true});
-        service.getCategory(shortName).then(function (response) {
-            console.log('getCategory');
+        service.getMenuItem(shortName).then(function (response) {
+            console.log('getMenuItem');
             console.log(response);
             expect(response.data.status).toBe(undefined);
         });

@@ -27,21 +27,20 @@
             });
         };
 
-        service.getCategory = function (shortName) {
+        service.getMenuItem = function (shortName) {
             var url = ApiPath + '/menu_items/' + shortName.toUpperCase() + '.json';
-            console.log('getCategory:url=' + url);
+            console.log('getMenuItem:url=' + url);
             return $http.get(url)
                 .success(function (response) {
-                    console.log('getCategory:resolve');
+                    console.log('getMenuItem:resolve');
                     console.log(response);
                     return response;
                 })
                 .error(function (reject) {
-                    console.log('getCategory:Error');
+                    console.log('getMenuItem:Error');
                     console.log(reject);
                 });
         }
-
     }
 
 
