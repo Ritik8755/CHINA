@@ -9,13 +9,13 @@
         var service = this;
 
         service.info = {};
-        service.info = {
-            firstName: 'a',
-            lastName: 'b',
-            email: 'mail@mail.com',
-            phone: '123-123-1234',
-            menuItem: 'L1'
-        };
+        //service.info = {
+        //    firstName: 'a',
+        //    lastName: 'b',
+        //    email: 'mail@mail.com',
+        //    phone: '123-123-1234',
+        //    menuItem: 'L1'
+        //};
 
         service.setInfo = function (informations) {
             service.info = informations;
