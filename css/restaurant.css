@@ -123,29 +123,7 @@ a[ui-sref="admin.auth"] {
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Header */
   #logo-img {
-    background: url('../images/restaurant-logo_medium.png') no-repeat;
-    width: 100px;
-    height: 100px;
-    margin: 5px 5px 5px 0;
-  }
-  /* End Header */
-}
-
-
-/********** Extra small devices only **********/
-@media (max-width: 767px) {
-  /* Header */
-  .navbar-brand {
-    padding-top: 10px;
-    height: 80px;
-  }
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 10px;
-    font-size: 5vw; /* 1vw = 1% of viewport width */
-  }
-  .navbar-brand p { /* Kosher cert */
-    font-size: .6em;
-    margin-top: 12px;
+    backgroun
   }
   .navbar-brand p img { /* Star-K */
     height: 20px;
@@ -189,13 +167,6 @@ a[ui-sref="admin.auth"] {
   }
   /* End Footer */
 }
-
-
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
-@media (max-width: 479px) {
-  /* Header */
-  .navbar-brand h1 { /* Restaurant name */
-    padding-top: 5px;
     font-size: 6vw;
   }
   /* End Header */
