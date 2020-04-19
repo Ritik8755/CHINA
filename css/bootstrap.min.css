@@ -40,28 +40,7 @@ a {
         outline: 0;
     }
 
-abbr[title] {
-    border-bottom: 1px dotted;
-}
-
-b, strong {
-    font-weight: 700;
-}
-
-dfn {
-    font-style: italic;
-}
-
-h1 {
-    margin: .67em 0;
-    font-size: 2em;
-}
-
-mark {
-    color: #000;
-    background: #ff0;
-}
-
+abb
 small {
     font-size: 80%;
 }
@@ -205,30 +184,6 @@ td, th {
         text-decoration: underline;
     }
 
-        a[href]:after {
-            content: " (" attr(href) ")";
-        }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="javascript:"]:after, a[href^="#"]:after {
-        content: "";
-    }
-
-    blockquote, pre {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    img, tr {
-        page-break-inside: avoid;
-    }
 
     img {
         max-width: 100% !important;
@@ -691,63 +646,7 @@ td, th {
 }
 
 .glyphicon-resize-small:before {
-    content: "\e097";
-}
-
-.glyphicon-exclamation-sign:before {
-    content: "\e101";
-}
-
-.glyphicon-gift:before {
-    content: "\e102";
-}
-
-.glyphicon-leaf:before {
-    content: "\e103";
-}
-
-.glyphicon-fire:before {
-    content: "\e104";
-}
-
-.glyphicon-eye-open:before {
-    content: "\e105";
-}
-
-.glyphicon-eye-close:before {
-    content: "\e106";
-}
-
-.glyphicon-warning-sign:before {
-    content: "\e107";
-}
-
-.glyphicon-plane:before {
-    content: "\e108";
-}
-
-.glyphicon-calendar:before {
-    content: "\e109";
-}
-
-.glyphicon-random:before {
-    content: "\e110";
-}
-
-.glyphicon-comment:before {
-    content: "\e111";
-}
-
-.glyphicon-magnet:before {
-    content: "\e112";
-}
-
-.glyphicon-chevron-up:before {
-    content: "\e113";
-}
-
-.glyphicon-chevron-down:before {
-    content: "\e114";
+4";
 }
 
 .glyphicon-retweet:before {
